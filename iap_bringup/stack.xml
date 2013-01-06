@@ -1,0 +1,10 @@
+<stack>
+    <description brief="iap_bringup">
+    </description>
+  <author>Maintained by Michael Carroll</author>
+  <license>BSD</license>  
+  <review status="unreviewed" notes=""/>
+  <url>http://github.com/mjcarroll/open-robotics-lab</url>
+
+  <depend stack="turtlebot" /> <!-- zeroconf_avahi -->
+</stack>
