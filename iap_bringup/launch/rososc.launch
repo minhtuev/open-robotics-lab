@@ -1,0 +1,17 @@
+<launch>
+    <param name="layout_file" value="$(find teleop_handler)/layouts/teleop-ipod.touchosc"/>
+    <node pkg="pytouchosc" type="layoutserver_node" name="layoutserver"/>
+
+    <node pkg="touchosc_bridge" type="touchosc_bridge.py" name="touchosc_bridge" output="screen">
+        <param name="osc_name" value="ROS Teleop"/>
+        <param name="port" value="9000" />
+        <param name="print_fallback" value="False"/>
+        <param name="load_default" value="False"/>
+        <rosparam param="handlers">[teleop, diagnostics]</rosparam>
+        <rosparam command="load" file="$(find teleop_handler)/cfg/teleop.yaml" />
+        <rosparam command="load" file="$(find diagnostics_handler)/cfg/diagnostics.yaml" />
+
+        <remap from="/cmd_vel" to="/joy_vel_smoother/raw_cmd_vel"/>
+    </node>
+
+</launch>

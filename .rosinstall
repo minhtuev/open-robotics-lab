@@ -3,5 +3,9 @@
 # IF YOU WANT TO CHANGE THE ROS ENVIRONMENT VARIABLES
 # USE THE rosinstall TOOL INSTEAD.
 # IF YOU CHANGE IT, USE rosinstall FOR THE CHANGES TO TAKE EFFECT
-
-- other: { local-name: ./iap_bringup }
+- other: {local-name: iap_bringup}
+- setup-file: {local-name: /opt/ros/groovy/setup.sh}
+- git: { uri: 'https://github.com/Auburn-Automow/rososc.git', local-name: rososc, version: '0.2'}
+- git: { uri: 'https://github.com/Auburn-Automow/rososc_tutorials.git', local-name: rososc_tutorials, version: '0.2'}
+- git: { uri: 'https://github.com/Auburn-Automow/rososc_utilities.git', local-name: rososc_utilities, version: 'master'}
+- git: { uri: 'https://github.com/yujinrobot/yujin_ocs.git', local-name: yujin_ocs }

@@ -23,3 +23,9 @@ wiped
 msg_gen
 srv_gen
 *.cfgc
+
+rososc
+rososc_tutorials
+rososc_utilities
+yujin_ocs
+.rosinstall.bak
